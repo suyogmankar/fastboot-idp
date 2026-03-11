@@ -1,0 +1,16 @@
+apiVersion: idp.adesso.launchpad/v1alpha1
+kind: Platform
+metadata:
+  name: adesso-launchpad
+  namespace: local
+spec:
+  name: adesso-launchpad
+  stage: local
+  version: 1.0.0
+  services:
+    databases:
+      - name: test-db
+        type: postgres
+        version: "15"
+        port: 5432
+        secretName: postgres-secret
