@@ -9,13 +9,13 @@ rbac:
   clusterRoleBindingName: ClusterRoleBinding
 
 image:
-  repository: fastboot-idp-operator
+  repository: fastboot-operator
   tag: local
   pullPolicy: Never
   imagePullSecret: artifactory-secret
 
 deployment:
-  name: fastboot-idp-operator
+  name: fastboot-operator
   appName: fastboot-operator
   replicas: 1
   selectorLabel: fastboot-operator
@@ -33,7 +33,7 @@ deployment:
           fieldPath: metadata.namespace
 
 platform:
-  name: fastboot-ipd
+  name: fastboot-idp
   stage: local
   version: 1.0.0
 
